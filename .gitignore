@@ -26,4 +26,8 @@ npm-debug.log*
 # notes and such
 /plans
 /ai_examples
+plans/
+ai_examples/
+
+
 

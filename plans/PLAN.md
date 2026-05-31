@@ -384,9 +384,13 @@ The header will contain a sticky/fixed nav bar with anchor links to each section
 
 5. **Change code snippets in personal.json to be more in-line with my experience** - Use languages I am more attuned to, such as Python, Javascript, Java, Terraform, etc. (mudar no personal.json)
 
-6. **Check what site.json does**: just check what it does and why it is relevant. plus check why the provider is there, and 
+6. **Add favicon to website** - Adding a tech related favicon should make the website look more professional, respecting the dark synth color scheme. Search for recommended favicon sources
 
 7. **Add og.webp image** - we seem to have it defined in the site.json, but can't find any og.webp image
+
+8. **Add pics to about me section** - Add pics of myself to the right of the about me text content. These pictures should rotate regularly, and be sourced from a folder in the project directory
+
+9. **Change About me section to match horizontal size of other sections (taking into account the photo scroller to be added)** - Change the about me section to have the same width of the other general sections
 ---
 
 ## 10 · Custom Domain (free options)
