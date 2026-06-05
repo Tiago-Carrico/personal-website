@@ -10,20 +10,27 @@ import { Certifications } from './components/Certifications';
 import { Projects } from './components/Projects';
 import { Footer } from './components/Footer';
 import { Analytics } from './components/Analytics';
+import { MouseSpotlight } from './components/MouseSpotlight';
 
 function App() {
   const { isDark, toggleTheme } = useTheme();
 
+  // ↓ Toggle this flag to show/hide the grid background
+  const SHOW_GRID = false;
+
   return (
     <div className="min-h-screen bg-background text-on-surface font-sans transition-colors duration-300 relative selection:bg-primary/30">
       <Analytics />
-      
+
       {/* Background Grid */}
-      <div className="bg-grid absolute inset-0 z-0 opacity-40 mix-blend-overlay pointer-events-none"></div>
+      {SHOW_GRID && <div className="bg-grid fixed inset-0 z-0 pointer-events-none" />}
+
+      {/* Mouse spotlight — follows cursor with layered radial gradient */}
+      {/*<MouseSpotlight />*/}
 
       <div className="relative z-10 flex flex-col min-h-screen">
         <Header isDark={isDark} toggleTheme={toggleTheme} />
-        
+
         <main className="flex-grow">
           <Hero />
           <About />
@@ -33,7 +40,7 @@ function App() {
           <Certifications />
           <Projects />
         </main>
-        
+
         <Footer />
       </div>
     </div>

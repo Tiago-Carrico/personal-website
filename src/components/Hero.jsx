@@ -101,7 +101,7 @@ export function Hero() {
                     {lang === 'en' ? 'View Projects' : 'Ver Projetos'} <ArrowRight size={18} />
                   </a>
                   <a
-                    href="#contact"
+                    href="#footer"
                     className="px-8 py-4 border border-outline-variant text-primary font-display text-sm font-medium rounded-lg hover:bg-surface-dim hover:-translate-y-1 transition-all focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background outline-none"
                   >
                     {lang === 'en' ? 'Contact Me' : 'Contactar-me'}

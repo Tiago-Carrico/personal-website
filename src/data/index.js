@@ -5,6 +5,7 @@ import enCertifications from './en/certifications.json';
 import enProjects from './en/projects.json';
 import enSkills from './en/skills.json';
 import enSite from './en/site.json';
+import enAbout from "./en/about.json";
 
 import ptPersonal from './pt/personal.json';
 import ptExperience from './pt/experience.json';
@@ -13,6 +14,7 @@ import ptCertifications from './pt/certifications.json';
 import ptProjects from './pt/projects.json';
 import ptSkills from './pt/skills.json';
 import ptSite from './pt/site.json';
+import ptAbout from "./pt/about.json";
 
 export const siteData = {
   en: {
@@ -22,7 +24,8 @@ export const siteData = {
     certifications: enCertifications,
     projects: enProjects,
     skills: enSkills,
-    site: enSite
+    site: enSite,
+    about: enAbout
   },
   pt: {
     personal: ptPersonal,
@@ -31,6 +34,7 @@ export const siteData = {
     certifications: ptCertifications,
     projects: ptProjects,
     skills: ptSkills,
-    site: ptSite
+    site: ptSite,
+    about: ptAbout
   }
 };

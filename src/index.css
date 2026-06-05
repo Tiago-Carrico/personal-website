@@ -4,33 +4,55 @@
 
 @layer base {
   :root {
-    --color-background: 248 249 255; /* #f8f9ff */
+    --color-background: 248 249 255;
+    /* #f8f9ff */
     --color-surface: 255 255 255;
-    --color-surface-dim: 234 241 255; /* #eaf1ff */
-    --color-primary: 53 37 205; /* #3525cd */
-    --color-secondary: 0 106 97; /* #006a61 */
-    --color-on-surface: 11 28 48; /* #0b1c30 */
-    --color-on-surface-variant: 70 69 85; /* #464555 */
-    --color-outline: 119 117 135; /* #777587 */
-    --color-outline-variant: 199 196 216; /* #c7c4d8 */
-    --glass-bg: rgba(255, 255, 255, 0.4);
-    --glass-border: rgba(53, 37, 205, 0.1);
+    --color-surface-dim: 234 241 255;
+    /* #eaf1ff */
+    --color-primary: 53 37 205;
+    /* #3525cd */
+    --color-secondary: 0 106 97;
+    /* #006a61 */
+    --color-on-surface: 11 28 48;
+    /* #0b1c30 */
+    --color-on-surface-variant: 70 69 85;
+    /* #464555 */
+    --color-outline: 119 117 135;
+    /* #777587 */
+    --color-outline-variant: 199 196 216;
+    /* #c7c4d8 */
+    --glass-bg: rgba(255, 255, 255, 0.88);
+    --glass-border: rgba(53, 37, 205, 0.15);
     --glass-hover-shadow: rgba(53, 37, 205, 0.08);
+    /* Grid background — light theme: subtle indigo lines */
+    --grid-color: rgba(53, 37, 205, 0.07);
+    --grid-size: 80px;
   }
-  
+
   .dark {
-    --color-background: 6 6 14; /* #06060e */
-    --color-surface: 19 18 28; /* #13121c */
+    --color-background: 6 6 14;
+    /* #06060e */
+    --color-surface: 19 18 28;
+    /* #13121c */
     --color-surface-dim: 25 25 36;
-    --color-primary: 168 85 247; /* #a855f7 */
-    --color-secondary: 236 72 153; /* #ec4899 */
-    --color-on-surface: 228 225 238; /* #e4e1ee */
-    --color-on-surface-variant: 207 194 214; /* #cfc2d6 */
-    --color-outline: 152 141 159; /* #988d9f */
-    --color-outline-variant: 77 67 84; /* #4d4354 */
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(168, 85, 247, 0.1);
+    --color-primary: 168 85 247;
+    /* #a855f7 */
+    --color-secondary: 236 72 153;
+    /* #ec4899 */
+    --color-on-surface: 228 225 238;
+    /* #e4e1ee */
+    --color-on-surface-variant: 207 194 214;
+    /* #cfc2d6 */
+    --color-outline: 152 141 159;
+    /* #988d9f */
+    --color-outline-variant: 77 67 84;
+    /* #4d4354 */
+    --glass-bg: rgba(19, 18, 28, 0.88);
+    --glass-border: rgba(168, 85, 247, 0.15);
     --glass-hover-shadow: rgba(168, 85, 247, 0.1);
+    /* Grid background — dark theme: subtle neon purple lines */
+    --grid-color: rgba(168, 85, 247, 0.09);
+    --grid-size: 80px;
   }
 }
 
@@ -40,10 +62,10 @@ body {
 
 @layer utilities {
   .bg-grid {
-    background-size: 40px 40px;
-    background-image: 
-        linear-gradient(to right, rgb(var(--color-primary) / 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgb(var(--color-primary) / 0.05) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+    background-image:
+      linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
   }
 
   .glass-panel {
@@ -53,7 +75,7 @@ body {
     border: 1px solid var(--glass-border);
     transition: all 0.3s ease;
   }
-  
+
   .glass-panel:hover {
     box-shadow: 0 0 20px var(--glass-hover-shadow);
     border-color: rgb(var(--color-primary) / 0.3);
