@@ -18,12 +18,20 @@
   ],
   "heroSnippets": [
     {
-      "language": "Go",
-      "code": "func (s *Server) Handle(ctx context.Context, req Request) (Response, error) {\n    span := trace.StartSpan(ctx)\n    defer span.End()\n\n    res, err := s.router.Route(req)\n    if err != nil {\n        return nil, s.errHandler(err)\n    }\n    return res, nil\n}"
+      "language": "Python",
+      "code": "def deploy_to_production():\n\ttry:\n\t\tdeploy()\n\texcept Exception as e:\n\t\tdeploy()  #works second time"
     },
     {
-      "language": "TypeScript",
-      "code": "const buildAwesomeThings = () => {\n  while(engineer.coffeeLevel > 0) {\n    engineer.writeCode();\n    engineer.solveProblems();\n  }\n};"
+      "language": "Java",
+      "code": "public class EnterpriseGreetingServiceImpl implements IGreetingServiceProviderFactory {\n\tpublic String greet(String name) {\n\t\treturn \"Hello, \" + name;\n\t}\n}"
+    },
+    {
+      "language": "C++",
+      "code": "int x = 0;\nx = x++ + ++x;\nprintf(\"%d\", x);"
+    },
+    {
+      "language": "Terraform",
+      "code": "resource \"aws_instance\" \"definitely_temporary\" {\n\tami           = \"ami-00000000\"\n\tinstance_type = \"t3.xlarge\"\n\n\ttags = {\n\t\tName        = \"temp-test-DELETEME\"\n\t\tCreated     = \"2021-03-04\"\n\t\tDeleteBy    = \"next-friday\"  # load-bearing\n\t}\n}"
     }
   ],
   "socials": [

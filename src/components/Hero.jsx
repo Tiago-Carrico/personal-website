@@ -157,10 +157,20 @@ export function Hero() {
 
 // Simple hacky syntax highlighter to make snippets look good
 function syntaxHighlight(code) {
-  return code
-    .replace(/(const|let|var|function|return|if|else|func|import|export|from|type|interface|err|nil|span|ctx|req|res|defer)/g, '<span class="text-primary">$1</span>')
-    .replace(/(true|false|null|undefined)/g, '<span class="text-secondary">$1</span>')
-    .replace(/(["'`].*?["'`])/g, '<span class="text-green-500/80">$1</span>')
-    .replace(/(\/\*.*?\*\/|\/\/.*)/g, '<span class="text-outline">$1</span>')
-    .replace(/([0-9]+)/g, '<span class="text-secondary">$1</span>');
+  const unescaped = code.replace(/\\"/g, '"').replace(/\\n/g, '\n').replace(/\\t/g, '\t')
+  const keywords = new Set(['const', 'let', 'var', 'function', 'return', 'if', 'else', 'func', 'import', 'export', 'from', 'type', 'interface', 'err', 'nil', 'ctx', 'req', 'res', 'defer'])
+  const literals = new Set(['true', 'false', 'null', 'undefined'])
+  return unescaped.replace(
+    /(["'`][^"'`\n]*["'`])|(\/\/[^\n]*)|(\/\*[\s\S]*?\*\/)|(\b\d+\b)|(\b\w+\b)(?=\s*\()|(\b\w+\b)/g,
+    (match, str, lineComment, blockComment, number, funcName, word) => {
+      if (str) return `<span class="text-secondary">${match}</span>`
+      if (lineComment) return `<span class="text-outline">${match}</span>`
+      if (blockComment) return `<span class="text-outline">${match}</span>`
+      if (number) return `<span class="text-secondary">${match}</span>`
+      if (funcName) return `<span class="text-primary">${match}</span>`
+      if (keywords.has(word)) return `<span class="text-primary">${match}</span>`
+      if (literals.has(word)) return `<span class="text-secondary">${match}</span>`
+      return match
+    }
+  )
 }
