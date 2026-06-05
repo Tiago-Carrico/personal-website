@@ -2,8 +2,12 @@
   {
     "title": "Website Portefólio",
     "description": "Um portefólio pessoal para mostrar os meus projetos.",
-    "tags": ["React", "CSS", "Vite"],
-    "link": "https://github.com",
+    "tags": [
+      "React",
+      "CSS",
+      "Vite"
+    ],
+    "link": "https://github.com/Tiago-Carrico/personal-website",
     "image": "https://via.placeholder.com/300x200"
   }
 ]

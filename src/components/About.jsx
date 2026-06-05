@@ -46,7 +46,7 @@ export function About() {
               <div className={hasPhotos ? 'md:col-span-2' : ''}>
                 <Terminal className="text-primary mb-6" size={32} />
                 <h3 className="font-display text-2xl font-bold text-on-surface mb-4">
-                  {lang === 'en' ? 'Technical Leadership' : 'Liderança Técnica'}
+                  {lang === 'en' ? 'More than just Uptime' : 'Mais do que Uptime'}
                 </h3>
                 <p className="font-body text-on-surface-variant leading-relaxed text-lg whitespace-pre-line">
                   {bio}
