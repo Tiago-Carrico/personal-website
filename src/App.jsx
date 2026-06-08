@@ -16,7 +16,7 @@ function App() {
   const { isDark, toggleTheme } = useTheme();
 
   // ↓ Toggle this flag to show/hide the grid background
-  const SHOW_GRID = false;
+  const SHOW_GRID = true;
 
   return (
     <div className="min-h-screen bg-background text-on-surface font-sans transition-colors duration-300 relative selection:bg-primary/30">

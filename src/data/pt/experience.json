@@ -10,8 +10,7 @@
       "Automatização de infraestrutura usando Infraestrutura como Código (Terraform, CloudFormation) para tornar implementações mais repetitivas e fiáveis",
       "Apoiar pipelines de CI/CD com ferramentas como GitHub Actions e AWS CodePipeline para optimizar processos e reduzir passos de implementação manuais",
       "Melhorar a fiabilidade de sistemas através de painéis de monitorização, logging e observabilidade usados para visibilidade operacional e resposta a incidentes",
-      "Contribuir para os fluxos de autenticação e identidade (SSO/Auth0), ajudando a melhorar a forma como os utilizadores e os sistemas acedem às aplicações de forma segura",
-      "Colaborar com engenheiros e stakeholders de várias equipas para fornecer soluções cloud e dar suporte aos sistemas de produção nas operações do dia-a-dia"
+      "Contribuir para os fluxos de autenticação e identidade (SSO/Auth0), ajudando a melhorar a forma como os utilizadores e os sistemas acedem às aplicações de forma segura"
     ]
   },
   {
@@ -23,9 +22,7 @@
       "Traduzir processos de negócio em fluxos de trabalho técnicos e documentação estruturada para automatização e desenvolvimento de sistemas",
       "Desenho de automatizações de fluxos de trabalho utilizando BPMN 2.0 e implementação com ferramentas como n8n",
       "Desenvolvimento de serviços backend em Java e Python para apoiar a automatização de processos e integração de sistemas",
-      "Contribuição para o desenho de arquiteturas de microserviços e orientadas a eventos no âmbito dos sistemas empresarias existentes",
-      "Elaboração de documentação técnica abrangendo fluxos de trabalho, sistemas e processos de implementação para apoiar diversas equipas",
-      "Trabalhar com equipas multifuncionais para melhorar a automação, facilidade de manutenção e a integração entre sistemas internos"
+      "Contribuição para o desenho de arquiteturas de microserviços e orientadas a eventos no âmbito dos sistemas empresarias existentes"
     ]
   }
 ]

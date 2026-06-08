@@ -14,6 +14,7 @@
     --color-secondary: 0 106 97;
     /* #006a61 */
     --color-on-surface: 11 28 48;
+    /*Base text color*/
     /* #0b1c30 */
     --color-on-surface-variant: 70 69 85;
     /* #464555 */
@@ -21,7 +22,7 @@
     /* #777587 */
     --color-outline-variant: 199 196 216;
     /* #c7c4d8 */
-    --glass-bg: rgba(255, 255, 255, 0.88);
+    --glass-bg: rgba(250, 250, 250, 0.88);
     --glass-border: rgba(53, 37, 205, 0.15);
     --glass-hover-shadow: rgba(53, 37, 205, 0.08);
     /* Grid background — light theme: subtle indigo lines */
@@ -40,6 +41,7 @@
     --color-secondary: 236 72 153;
     /* #ec4899 */
     --color-on-surface: 228 225 238;
+    /*Base text color*/
     /* #e4e1ee */
     --color-on-surface-variant: 207 194 214;
     /* #cfc2d6 */
