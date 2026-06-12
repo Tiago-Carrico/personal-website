@@ -6,16 +6,6 @@
   "photo": "/photo.webp",
   "showPhoto": false,
   "bio": "Sou um engenheiro de software especializado em construir as bases para experiências digitais. Prospero em ambientes onde posso resolver desafios complexos, colaborar com equipas talentosas, melhorar as minhas habilidades continuamente e aprender novas tecnologias.",
-  "metrics": [
-    {
-      "value": "1+",
-      "label": "Anos de Experiência"
-    },
-    {
-      "value": "1M+",
-      "label": "Utilizadores Escalados"
-    }
-  ],
   "heroSnippets": [
     {
       "language": "Python",

@@ -6,16 +6,6 @@
   "photo": "/photo.webp",
   "showPhoto": false,
   "bio": "I'm a software engineer specializing in building the foundations for digital experiences. I thrive in environments where I can tackle complex challenges, collaborate with talented teams, and continuously improve my skills and learn new technologies.",
-  "metrics": [
-    {
-      "value": "1+",
-      "label": "Years Experience"
-    },
-    {
-      "value": "2M+",
-      "label": "Active Users Scaled"
-    }
-  ],
   "heroSnippets": [
     {
       "language": "Python",

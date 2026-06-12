@@ -4,43 +4,45 @@ A fast, responsive, and beautiful single-page portfolio designed for software en
 
 Built with **React**, **Vite**, **Tailwind CSS**, and **Framer Motion**.
 
-## 🚀 Features
+## Features
 
-- **Data-Driven Content**: All text, projects, and experiences are loaded from JSON files. No need to touch the React source code to update your CV.
+- **Data-Driven Content**: All text, projects, and experiences are loaded from JSON files. No need to touch the React source code to update your content.
 - **Dark/Light Mode**: Smooth, accessible theme toggling that remembers the user's preference.
 - **Animations**: Silky smooth scroll-reveal and layout animations using Framer Motion.
 - **Glassmorphism UI**: Beautiful, modern UI cards with subtle glows and blurs.
 - **Resume Download**: Easily link your PDF resume.
 
-## 📂 Project Structure
+## Project Structure
 
 - `src/data/`: This is where your content lives.
 - `src/components/`: The React UI components.
 - `src/hooks/`: Custom hooks like `useTheme`.
-- `public/`: Static assets like your `photo.webp` and `cv.pdf`.
+- `public/`: Static assets like your `og.png` and `cv.pdf`.
 
-## ✍️ How to Update Your Content
+## How to Update Your Content
 
-You never have to touch a `.jsx` file to update your portfolio. Simply edit the JSON files in `src/data/`:
+You never have to touch a `.jsx` file to update your portfolio content, simply edit the JSON files in `src/data/`, split by both available languages (English and Portuguese). These files overall also contain the data related to the section titles and subtitles:
 
-1. **`personal.json`**: Update your name, bio, social links, and code snippets for the hero section.
-2. **`experience.json`**: Add your work history.
-3. **`education.json`**: Add your academic background.
-4. **`projects.json`**: Showcase your best repositories and side projects.
-5. **`skills.json`**: Define your tech stack categorized into groups.
-6. **`certifications.json`**: Add certificates with verification links.
-7. **`site.json`**: Global metadata like the page title and language.
+1. **`about.json`**: contains the bio of the "About me" section.
+2. **`blog.json`**: contains a list of external articles, with support for a direct link to them, and additional content details (e.g.: excerpt, tags, time to read)
+3. **`certifications.json`**: contains a list of certifications, with support for taken dates and IDs
+4. **`education.json`**: contains a list of the different higher education courses you have taken
+5. **`experience.json`**: contains a list of your job experience, with support for a specific role, and itemized bullet points for a job description
+6. **`personal.json`**: contains the content for the Hero banner, such as your name, title, brief description, etc., as well as the content for the code snippets that cycle. Also contains the information about your shown socials.
+7. **`projects.json`**: contains a list of your shown projects, with support for a link to show them, and a thumbnail to represent them, as well as support for descriptive components, such as a brief description and tags
+8. **`site.json`**: mostly metadata related information, but the English version also contains information about how to represent the website on external platforms (e.g.: facebook, X (formerly Twitter), etc.) (change the thumbnail by replacing `og.png` in the `public` folder)
+9. **`skills.json`**: contains a list of skills you choose to display, split into different categories
 
 ### Updating your Photo and Resume
-- **Photo**: Replace `public/photo.webp` with your own image, or set `"showPhoto": false` in `personal.json` to hide it.
-- **Resume**: Replace `public/cv.pdf` with your actual PDF resume.
+- **Photo**: Replace/add `public/photo.webp` with your own image, or set `"showPhoto": false` in `personal.json` to hide it.
+- **Resume**: Replace/add `public/cv.pdf` with your actual PDF resume.
 
-## 🎨 Theming
+## Theming
 
 This project uses CSS variables defined in `src/index.css` and mapped in `tailwind.config.js`. 
 To change the colors, simply edit the RGB values in `src/index.css` under the `:root` (Light mode) and `.dark` (Dark mode) selectors.
 
-## 🛠️ Local Development
+## Local Development
 
 1. Install dependencies:
    ```bash
@@ -52,7 +54,7 @@ To change the colors, simply edit the RGB values in `src/index.css` under the `:
    ```
 3. Open `http://localhost:5173` in your browser.
 
-## 🚢 Deployment (GitHub Pages)
+## Deployment (GitHub Pages)
 
 This project is configured to be deployed easily to GitHub Pages.
 The GitHub Actions workflow is already set up in `.github/workflows/deploy.yml`.
