@@ -32,6 +32,11 @@ export function Header() {
           <a href="#projects" className="text-on-surface-variant hover:text-primary transition-colors font-display text-sm font-medium">
             {lang === 'en' ? 'Projects' : 'Projetos'}
           </a>
+          {content.blog?.enabled && (
+            <a href="#blog" className="text-on-surface-variant hover:text-primary transition-colors font-display text-sm font-medium">
+              {lang === 'en' ? 'Blog' : 'Blog'}
+            </a>
+          )}
         </div>
 
         {/* Actions */}
@@ -78,7 +83,7 @@ export function Header() {
             {lang === 'en' ? 'About' : 'Sobre'}
           </a>
           <a href="#skills" onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface hover:text-primary transition-colors font-display text-lg font-medium py-2">
-            Skills
+            {lang === 'en' ? 'Skills' : 'Competências'}
           </a>
           <a href="#experience" onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface hover:text-primary transition-colors font-display text-lg font-medium py-2">
             {lang === 'en' ? 'Experience' : 'Experiência'}
@@ -86,6 +91,11 @@ export function Header() {
           <a href="#projects" onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface hover:text-primary transition-colors font-display text-lg font-medium py-2">
             {lang === 'en' ? 'Projects' : 'Projetos'}
           </a>
+          {content.blog?.enabled && (
+            <a href="#blog" onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface hover:text-primary transition-colors font-display text-lg font-medium py-2">
+              {lang === 'en' ? 'Blog' : 'Blog'}
+            </a>
+          )}
           <a
             href="/cv.pdf"
             target="_blank"

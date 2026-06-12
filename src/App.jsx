@@ -8,6 +8,7 @@ import { Experience } from './components/Experience';
 import { Education } from './components/Education';
 import { Certifications } from './components/Certifications';
 import { Projects } from './components/Projects';
+import { Blog } from './components/Blog';
 import { Footer } from './components/Footer';
 import { Analytics } from './components/Analytics';
 import { MouseSpotlight } from './components/MouseSpotlight';
@@ -23,7 +24,7 @@ function App() {
       <Analytics />
 
       {/* Background Grid */}
-      {SHOW_GRID && <div className="bg-grid fixed inset-0 z-0 pointer-events-none" />}
+      {SHOW_GRID && <div className="bg-grid absolute inset-0 z-0 pointer-events-none" />}
 
       {/* Mouse spotlight — follows cursor with layered radial gradient */}
       {/*<MouseSpotlight />*/}
@@ -39,6 +40,7 @@ function App() {
           <Education />
           <Certifications />
           <Projects />
+          <Blog />
         </main>
 
         <Footer />

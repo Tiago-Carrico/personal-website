@@ -3,7 +3,7 @@
   "description": "Website pessoal",
   "lang": "pt",
   "dateLocale": "pt-PT",
-  "ogImage": "/og.webp",
+  "ogImage": "/og.png",
   "analytics": {
     "enabled": false,
     "provider": "plausible",

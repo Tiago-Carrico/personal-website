@@ -1,0 +1,33 @@
+{
+  "enabled": false,
+  "title": "Articles & Writing",
+  "subtitle": "Thoughts and tutorials on Cloud, DevOps, and modern software engineering.",
+  "posts": [
+    {
+      "title": "Building a GitOps Pipeline with ArgoCD and Kubernetes",
+      "excerpt": "A step-by-step guide to setting up a fully automated, declarative GitOps pipeline for cloud-native applications.",
+      "url": "https://dev.to/yourusername/argo-cd-gitops-kubernetes",
+      "date": "2026-05",
+      "readTime": "6 min read",
+      "platform": "Dev.to",
+      "tags": [
+        "Kubernetes",
+        "GitOps",
+        "ArgoCD"
+      ]
+    },
+    {
+      "title": "Mastering Terraform Module Architecture",
+      "excerpt": "Best practices for writing reusable, scalable, and secure Terraform modules across multiple AWS accounts.",
+      "url": "https://medium.com/yourusername/terraform-modules-aws",
+      "date": "2026-02",
+      "readTime": "8 min read",
+      "platform": "Medium",
+      "tags": [
+        "Terraform",
+        "AWS",
+        "IaC"
+      ]
+    }
+  ]
+}

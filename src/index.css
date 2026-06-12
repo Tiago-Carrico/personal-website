@@ -3,66 +3,122 @@
 @tailwind utilities;
 
 @layer base {
+  /* ==========================================================================
+     DESIGN TOKENS & CUSTOM PROPERTIES
+     Mapped to Tailwind CSS in tailwind.config.js
+     ========================================================================== */
   :root {
-    --color-background: 248 249 255;
-    /* #f8f9ff */
-    --color-surface: 255 255 255;
-    --color-surface-dim: 234 241 255;
-    /* #eaf1ff */
-    --color-primary: 53 37 205;
-    /* #3525cd */
-    --color-secondary: 0 106 97;
-    /* #006a61 */
-    --color-on-surface: 11 28 48;
-    /*Base text color*/
-    /* #0b1c30 */
-    --color-on-surface-variant: 70 69 85;
-    /* #464555 */
-    --color-outline: 119 117 135;
-    /* #777587 */
-    --color-outline-variant: 199 196 216;
-    /* #c7c4d8 */
+    /* ------------------------------------------------------------------------
+       Light Theme (Fresh Tech Palette)
+       ------------------------------------------------------------------------ */
+
+    /* Page Viewport Background
+       - Used in App.jsx (body container) via 'bg-background' to set the main background color. */
+    --color-background: 248 249 255; /* #f8f9ff */
+
+    /* Solid Container Surface
+       - Used in cards, components (e.g. Footer.jsx, sticky header nav) via 'bg-surface'. */
+    --color-surface: 255 255 255; /* #ffffff */
+
+    /* Muted/Dim Surface
+       - Used in section background alternates (e.g. Certifications, Experience bg) via 'bg-surface-dim/30'
+       - Used in timeline date chips via 'bg-surface-dim'. */
+    --color-surface-dim: 234 241 255; /* #eaf1ff */
+
+    /* Primary Accent Color
+       - Main branding color used for text, active tags, and timeline dots (e.g., Work Experience timeline accent).
+       - Used in list bullets (.tech-list), text accents ('text-primary'), and active selectors. */
+    --color-primary: 53 37 205; /* #3525cd - Deep Indigo */
+
+    /* Secondary Accent Color
+       - Accent color used for secondary features (e.g., Academic/Education timeline accent, special badges).
+       - Dynamically read by MouseSpotlight.jsx to color the cursor's radial spotlight trail. */
+    --color-secondary: 0 106 97; /* #006a61 - Deep Teal/Emerald */
+
+    /* Primary Typography
+       - Applied to body text and main headings ('text-on-surface') for high contrast readability. */
+    --color-on-surface: 11 28 48; /* #0b1c30 - Very Dark Blue */
+
+    /* Secondary/Muted Typography
+       - Applied to subtitles, descriptive bios, list contents, and metadata ('text-on-surface-variant'). */
+    --color-on-surface-variant: 70 69 85; /* #464555 - Cool Grayish Purple */
+
+    /* Primary Outline/Divider
+       - Used for standard divider lines, timeline tracks, and subtle structural borders ('border-outline'). */
+    --color-outline: 119 117 135; /* #777587 - Slate Gray */
+
+    /* Secondary/Accented Outline
+       - Used for decorative dividers or border accents ('border-outline-variant'). */
+    --color-outline-variant: 199 196 216; /* #c7c4d8 - Lilac Gray */
+
+    /* Glassmorphism Variables
+       - Configures translucent card overlays ('glass-panel') with blurred backdrops and primary accent borders. */
     --glass-bg: rgba(250, 250, 250, 0.88);
     --glass-border: rgba(53, 37, 205, 0.15);
     --glass-hover-shadow: rgba(53, 37, 205, 0.08);
-    /* Grid background — light theme: subtle indigo lines */
+
+    /* Background Grid Overlay
+       - Sets the color and spacing of grid lines ('bg-grid') rendered across the background. */
     --grid-color: rgba(53, 37, 205, 0.07);
     --grid-size: 80px;
   }
 
   .dark {
-    --color-background: 6 6 14;
-    /* #06060e */
-    --color-surface: 19 18 28;
-    /* #13121c */
-    --color-surface-dim: 25 25 36;
-    --color-primary: 168 85 247;
-    /* #a855f7 */
-    --color-secondary: 236 72 153;
-    /* #ec4899 */
-    --color-on-surface: 228 225 238;
-    /*Base text color*/
-    /* #e4e1ee */
-    --color-on-surface-variant: 207 194 214;
-    /* #cfc2d6 */
-    --color-outline: 152 141 159;
-    /* #988d9f */
-    --color-outline-variant: 77 67 84;
-    /* #4d4354 */
+    /* ------------------------------------------------------------------------
+       Dark Theme (Obsidian Synth Palette)
+       ------------------------------------------------------------------------ */
+
+    /* Page Viewport Background */
+    --color-background: 6 6 14; /* #06060e - Obsidian Black */
+
+    /* Solid Container Surface */
+    --color-surface: 19 18 28; /* #13121c - Slate Black */
+
+    /* Muted/Dim Surface */
+    --color-surface-dim: 25 25 36; /* #191924 - Dark Muted Slate */
+
+    /* Primary Accent Color */
+    --color-primary: 168 85 247; /* #a855f7 - Neon Violet */
+
+    /* Secondary Accent Color */
+    --color-secondary: 236 72 153; /* #ec4899 - Neon Pink */
+
+    /* Primary Typography */
+    --color-on-surface: 228 225 238; /* #e4e1ee - Soft Lavender Gray */
+
+    /* Secondary/Muted Typography */
+    --color-on-surface-variant: 207 194 214; /* #cfc2d6 - Soft Grayish Purple */
+
+    /* Primary Outline/Divider */
+    --color-outline: 152 141 159; /* #988d9f - Muted Gray Purple */
+
+    /* Secondary/Accented Outline */
+    --color-outline-variant: 77 67 84; /* #4d4354 - Dark Slate Purple */
+
+    /* Glassmorphism Variables */
     --glass-bg: rgba(19, 18, 28, 0.88);
     --glass-border: rgba(168, 85, 247, 0.15);
     --glass-hover-shadow: rgba(168, 85, 247, 0.1);
-    /* Grid background — dark theme: subtle neon purple lines */
+
+    /* Background Grid Overlay */
     --grid-color: rgba(168, 85, 247, 0.09);
     --grid-size: 80px;
   }
 }
 
 body {
+  /* Applies body background color, standard text color, body font, and transition duration. */
   @apply bg-background text-on-surface font-body antialiased transition-colors duration-300;
 }
 
 @layer utilities {
+  /* ==========================================================================
+     CUSTOM UTILITY CLASSES
+     ========================================================================== */
+
+  /* Background Grid Pattern (.bg-grid)
+     - Draws a fixed background grid pattern using repeating linear-gradients.
+     - Used in App.jsx as a fixed full-viewport overlay under content (pointer-events-none). */
   .bg-grid {
     background-size: var(--grid-size) var(--grid-size);
     background-image:
@@ -70,6 +126,10 @@ body {
       linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
   }
 
+  /* Glassmorphism Panel (.glass-panel)
+     - Creates a blurred frosted-glass card style with a semi-transparent background.
+     - Extensively used in all cards/containers (About, Projects, Certifications, Experience cards).
+     - On hover: reveals a primary accent border glow and box shadow. */
   .glass-panel {
     background-color: var(--glass-bg);
     backdrop-filter: blur(12px);
@@ -83,6 +143,9 @@ body {
     border-color: rgb(var(--color-primary) / 0.3);
   }
 
+  /* Custom Tech Bullet List (.tech-list)
+     - Configures a list item bullet with a small primary color square and space.
+     - Used for displaying tech lists or bulleted items (e.g. inside Skills.jsx, Experience details). */
   .tech-list li::before {
     content: "";
     display: inline-block;
@@ -91,5 +154,185 @@ body {
     background-color: rgb(var(--color-primary));
     margin-right: 12px;
     vertical-align: middle;
+  }
+}
+
+/* ==========================================================================
+   PRINT STYLESHEET
+   Ensures the page prints cleanly as a professional A4 paper CV.
+   ========================================================================== */
+@media print {
+  /* Reset page layout, background colors, and typography for paper printing */
+  @page {
+    size: A4 portrait;
+    margin: 1.5cm;
+  }
+
+  body, html {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    width: 100% !important;
+  }
+
+  /* Force browsers to output colors/borders cleanly, and override Framer Motion scroll-reveal/animation states */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     HIDDEN ELEMENTS (Non-printable UI)
+     ------------------------------------------------------------------------ */
+  
+  /* Hide sticky nav header, theme switches, buttons, and animations */
+  nav,
+  header,
+  footer p:first-of-type, /* Hide footer social logos */
+  #footer div.flex,       /* Hide footer social icon buttons */
+  button,
+  .bg-grid,
+  .pointer-events-none,
+  [aria-hidden="true"],
+  .fixed {
+    display: none !important;
+  }
+
+  /* Hide Hero section call-to-action buttons */
+  #hero a,
+  #hero button,
+  .inline-flex.items-center.gap-2.text-sm { /* View Repository / Verify buttons */
+    display: none !important;
+  }
+
+  /* Hide the right-side glowing visual code panels in Hero on print */
+  #hero .lg\:flex {
+    display: none !important;
+  }
+
+  /* Hide dynamic scroller indicators or pagination dots */
+  .relative.w-full.aspect-square + div.flex.justify-center {
+    display: none !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     TYPOGRAPHY & ACCENTS
+     ------------------------------------------------------------------------ */
+  h1 {
+    font-size: 28pt !important;
+    font-weight: 800 !important;
+    color: #000000 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 15px !important;
+  }
+
+  h2 {
+    font-size: 18pt !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    border-bottom: 2px solid #e5e7eb !important;
+    padding-bottom: 5px !important;
+    margin-top: 25px !important;
+    margin-bottom: 15px !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  h3 {
+    font-size: 14pt !important;
+    font-weight: 700 !important;
+    color: #111111 !important;
+    margin-bottom: 5px !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  p, li, span {
+    color: #333333 !important;
+  }
+
+  /* Ensure text selections are not styled */
+  ::selection {
+    background: transparent !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     CONTAINERS & COMPONENTS
+     ------------------------------------------------------------------------ */
+  
+  /* Flatten glassmorphism cards for printing */
+  .glass-panel {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid #d1d5db !important;
+    box-shadow: none !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Remove hover scale transitions */
+  .glass-panel:hover {
+    box-shadow: none !important;
+    border-color: #d1d5db !important;
+    transform: none !important;
+  }
+
+  /* Layout grids adjustment */
+  section {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    background: transparent !important;
+  }
+
+  /* Force grid-based cards to stack cleanly in single column if space is tight */
+  .grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  /* Timeline formatting for Work Experience and Education */
+  .border-l-2.border-outline\/30 {
+    border-color: #9ca3af !important;
+    margin-left: 10px !important;
+  }
+
+  .absolute.w-6.h-6.bg-surface {
+    background: #ffffff !important;
+    border-color: #111111 !important;
+    width: 12px !important;
+    height: 12px !important;
+    left: -7px !important;
+    top: 8px !important;
+  }
+
+  /* Skills & badges */
+  span.bg-secondary\/10,
+  span.bg-primary\/10,
+  div.bg-surface-dim {
+    background: #f3f4f6 !important;
+    color: #1f2937 !important;
+    border: 1px solid #d1d5db !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     PAGE BREAKS (CV structure optimization)
+     ------------------------------------------------------------------------ */
+  
+  /* Prevent sections, cards, and individual jobs from splitting awkwardly */
+  .glass-panel,
+  section,
+  .relative.border-l-2 > div {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 }
