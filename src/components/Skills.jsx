@@ -5,6 +5,9 @@ import { useLanguage } from '../hooks/useLanguage';
 export function Skills() {
   const { content, lang } = useLanguage();
   const skillsData = content.skills;
+
+  if (!skillsData?.enabled) return null;
+
   return (
     <section id="skills" className="py-20 relative">
       <div className="max-w-5xl mx-auto px-6">
@@ -15,7 +18,7 @@ export function Skills() {
         </ScrollReveal>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillsData.map((category, idx) => (
+          {skillsData.items.map((category, idx) => (
             <ScrollReveal key={idx} delay={idx * 0.1}>
               <div className="glass-panel p-6 rounded-2xl h-full flex flex-col group hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-6">

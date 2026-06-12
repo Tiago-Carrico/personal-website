@@ -1,28 +1,31 @@
-[
-  {
-    "company": "Deloitte",
-    "role": "Tech Analyst — Cloud & DevOps Engineer",
-    "startDate": "2025-01",
-    "endDate": "Present",
-    "description": [
-      "Build and maintain cloud-native backend services using AWS (Lambda, API Gateway) with Python and JavaScript, focusing on scalable microservice-based systems",
-      "Design and integrate APIs that connect modern cloud platforms with legacy enterprise systems and external services",
-      "Work on infrastructure automation using Infrastructure as Code (Terraform, CloudFormation) to make deployments more repeatable and reliable",
-      "Support CI/CD pipelines with tools like GitHub Actions and AWS CodePipeline to streamline delivery and reduce manual deployment steps",
-      "Improve system reliability through monitoring, logging, and observability dashboards used for operational visibility and incident response",
-      "Contribute to authentication and identity flows (SSO/Auth0), helping improve how users and systems securely access applications"
-    ]
-  },
-  {
-    "company": "Mindera",
-    "role": "Intern",
-    "startDate": "2023-10",
-    "endDate": "2024-07",
-    "description": [
-      "Translate business processes into technical workflows and structured documentation for automation and system design",
-      "Design workflow automations using BPMN 2.0 and implement them with tools like n8n",
-      "Build backend services in Java and Python to support process automation and system integration",
-      "Contribute to microservice and event-driven architecture design within existing enterprise systems"
-    ]
-  }
-]
+{
+  "enabled": true,
+  "items": [
+    {
+      "company": "Deloitte",
+      "role": "Tech Analyst — Cloud & DevOps Engineer",
+      "startDate": "2025-01",
+      "endDate": "Present",
+      "description": [
+        "Build and maintain cloud-native backend services using AWS (Lambda, API Gateway) with Python and JavaScript, focusing on scalable microservice-based systems",
+        "Design and integrate APIs that connect modern cloud platforms with legacy enterprise systems and external services",
+        "Work on infrastructure automation using Infrastructure as Code (Terraform, CloudFormation) to make deployments more repeatable and reliable",
+        "Support CI/CD pipelines with tools like GitHub Actions and AWS CodePipeline to streamline delivery and reduce manual deployment steps",
+        "Improve system reliability through monitoring, logging, and observability dashboards used for operational visibility and incident response",
+        "Contribute to authentication and identity flows (SSO/Auth0), helping improve how users and systems securely access applications"
+      ]
+    },
+    {
+      "company": "Mindera",
+      "role": "Intern",
+      "startDate": "2023-10",
+      "endDate": "2024-07",
+      "description": [
+        "Translate business processes into technical workflows and structured documentation for automation and system design",
+        "Design workflow automations using BPMN 2.0 and implement them with tools like n8n",
+        "Build backend services in Java and Python to support process automation and system integration",
+        "Contribute to microservice and event-driven architecture design within existing enterprise systems"
+      ]
+    }
+  ]
+}

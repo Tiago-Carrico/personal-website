@@ -8,12 +8,21 @@
     content="Cloud and DevOps Engineer specializing in serverless architectures, infrastructure automation, and cloud development." />
   <meta name="theme-color" content="#6C63FF" />
 
+  <!--
+    Static fallback meta tags for social crawlers (e.g. Googlebot, Twitterbot, LinkedInBot).
+    Crawlers that don't execute JavaScript read these directly from the HTML.
+
+    At runtime, these tags are overwritten reactively by the useDocumentMeta hook
+    (src/hooks/useDocumentMeta.js) using values from src/data/{lang}/site.json,
+    keeping them in sync when the user switches language.
+  -->
+
   <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Tiago Carriço - Cloud, DevOps and Software Engineer" />
   <meta property="og:description"
     content="Cloud and DevOps Engineer specializing in serverless architectures, infrastructure automation, and cloud development." />
-  <meta property="og:image" content="/og.png" />
+  <meta property="og:image" content="https://tiago-carrico.github.io/personal-website/og.png" />
   <meta property="og:site_name" content="Tiago Carriço - Cloud, DevOps and Software Engineer" />
 
   <!-- Twitter -->
@@ -22,7 +31,7 @@
   <meta name="twitter:description"
     content="Cloud and DevOps Engineer specializing in serverless architectures, infrastructure automation, and cloud development." />
   <meta name="twitter:image" content="https://tiago-carrico.github.io/personal-website/og.png" />
-  <!--<meta property="twitter:site" content="@my_username_if_applicable" />-->
+  <!--<meta name="twitter:site" content="@my_username_if_applicable" />-->
 
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

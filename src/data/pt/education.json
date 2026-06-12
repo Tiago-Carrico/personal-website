@@ -1,14 +1,17 @@
-[
-  {
-    "institution": "Universidade de Tecnologia",
-    "degree": "Mestrado em Engenharia de Software",
-    "startDate": "2023-09",
-    "endDate": "2024-07"
-  },
-  {
-    "institution": "Universidade de Coimbra",
-    "degree": "Licenciatura em Engenharia Informática",
-    "startDate": "2018-09",
-    "endDate": "2023-06"
-  }
-]
+{
+  "enabled": true,
+  "items": [
+    {
+      "institution": "Universidade de Tecnologia",
+      "degree": "Mestrado em Engenharia de Software",
+      "startDate": "2023-09",
+      "endDate": "2024-07"
+    },
+    {
+      "institution": "Universidade de Coimbra",
+      "degree": "Licenciatura em Engenharia Informática",
+      "startDate": "2018-09",
+      "endDate": "2023-06"
+    }
+  ]
+}

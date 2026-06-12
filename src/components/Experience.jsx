@@ -7,6 +7,9 @@ import { Briefcase } from 'lucide-react';
 export function Experience() {
   const { content, lang } = useLanguage();
   const experienceData = content.experience;
+
+  if (!experienceData?.enabled) return null;
+
   return (
     <section id="experience" className="py-20 relative bg-surface-dim/30">
       <div className="max-w-4xl mx-auto px-6">
@@ -17,7 +20,7 @@ export function Experience() {
         </ScrollReveal>
 
         <div className="relative border-l-2 border-outline/30 ml-3 md:ml-0 md:pl-0 space-y-12">
-          {experienceData.map((job, idx) => (
+          {experienceData.items.map((job, idx) => (
             <ScrollReveal key={idx} delay={idx * 0.1}>
               <div className="relative md:pl-10 pl-6">
                 {/* Timeline dot */}

@@ -6,7 +6,11 @@ import { Terminal } from 'lucide-react';
 
 export function About() {
   const { content, lang } = useLanguage();
-  const { bio } = content.about;
+  const aboutData = content.about;
+
+  if (!aboutData?.enabled) return null;
+
+  const { bio } = aboutData;
 
   // Flag to toggle photo display in the code itself
   const SHOW_PHOTOS = true;

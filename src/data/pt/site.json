@@ -1,9 +1,9 @@
 {
-  "title": "Tiago Carriço — Engenheiro de Cloud e DevOps",
-  "description": "Website pessoal",
+  "title": "Tiago Carriço - Engenheiro Cloud, DevOps e Software",
+  "header_title": "Tiago Carriço",
+  "description": "Engenheiro Cloud e DevOps especializado em arquiteturas serverless, automação de infraestrutura e desenvolvimento cloud.",
   "lang": "pt",
   "dateLocale": "pt-PT",
-  "ogImage": "/og.png",
   "analytics": {
     "enabled": false,
     "provider": "plausible",

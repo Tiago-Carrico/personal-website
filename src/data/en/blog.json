@@ -1,7 +1,7 @@
 {
   "enabled": false,
   "title": "Articles & Writing",
-  "subtitle": "Thoughts and tutorials on Cloud, DevOps, and modern software engineering.",
+  "subtitle": "Thoughts and tutorials on Cloud, DevOps, modern software engineering, or any other of my hobbies.",
   "posts": [
     {
       "title": "Building a GitOps Pipeline with ArgoCD and Kubernetes",

@@ -1,14 +1,17 @@
-[
-  {
-    "institution": "University of Coimbra",
-    "degree": "MSc in Software Engineering",
-    "startDate": "2023-09",
-    "endDate": "2024-07"
-  },
-  {
-    "institution": "University of Coimbra",
-    "degree": "BSc in Computer Science",
-    "startDate": "2018-09",
-    "endDate": "2023-06"
-  }
-]
+{
+  "enabled": true,
+  "items": [
+    {
+      "institution": "University of Coimbra",
+      "degree": "MSc in Software Engineering",
+      "startDate": "2023-09",
+      "endDate": "2024-07"
+    },
+    {
+      "institution": "University of Coimbra",
+      "degree": "BSc in Computer Science",
+      "startDate": "2018-09",
+      "endDate": "2023-06"
+    }
+  ]
+}

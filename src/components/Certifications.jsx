@@ -7,6 +7,9 @@ import { Award, ExternalLink } from 'lucide-react';
 export function Certifications() {
   const { content, lang } = useLanguage();
   const certificationsData = content.certifications;
+
+  if (!certificationsData?.enabled) return null;
+
   return (
     <section id="certifications" className="py-20 relative bg-surface-dim/30">
       <div className="max-w-5xl mx-auto px-6">
@@ -17,7 +20,7 @@ export function Certifications() {
         </ScrollReveal>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {certificationsData.map((cert, idx) => (
+          {certificationsData.items.map((cert, idx) => (
             <ScrollReveal key={idx} delay={idx * 0.1}>
               <div className="glass-panel p-6 rounded-2xl flex flex-col h-full group hover:-translate-y-1 transition-transform duration-300">
                 <div className="flex items-start justify-between mb-4">

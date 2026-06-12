@@ -7,6 +7,9 @@ import { GraduationCap } from 'lucide-react';
 export function Education() {
   const { content, lang } = useLanguage();
   const educationData = content.education;
+
+  if (!educationData?.enabled) return null;
+
   return (
     <section id="education" className="py-20 relative">
       <div className="max-w-4xl mx-auto px-6">
@@ -17,7 +20,7 @@ export function Education() {
         </ScrollReveal>
 
         <div className="relative border-l-2 border-outline/30 ml-3 md:ml-0 space-y-12">
-          {educationData.map((edu, idx) => (
+          {educationData.items.map((edu, idx) => (
             <ScrollReveal key={idx} delay={idx * 0.1}>
               <div className="relative md:pl-10 pl-6">
                 <div className="absolute w-6 h-6 bg-surface border-4 border-secondary rounded-full -left-3 md:-left-[13px] top-1"></div>

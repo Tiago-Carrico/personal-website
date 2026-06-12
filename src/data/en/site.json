@@ -1,9 +1,22 @@
 {
-  "title": "Tiago Carriço — Cloud and DevOps Engineer",
-  "description": "Personal website",
+  "title": "Tiago Carriço - Cloud, DevOps and Software Engineer",
+  "header_title": "Tiago Carriço",
+  "description": "Cloud and DevOps Engineer specializing in serverless architectures, infrastructure automation, and cloud development.",
   "lang": "en",
   "dateLocale": "pt-PT",
-  "ogImage": "/og.png",
+  "og": {
+    "type": "website",
+    "siteName": "Tiago Carriço - Cloud, DevOps and Software Engineer",
+    "title": "Tiago Carriço - Cloud, DevOps and Software Engineer",
+    "description": "Cloud and DevOps Engineer specializing in serverless architectures, infrastructure automation, and cloud development.",
+    "image": "https://tiago-carrico.github.io/personal-website/og.png"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Tiago Carriço - Cloud, DevOps and Software Engineer",
+    "description": "Cloud and DevOps Engineer specializing in serverless architectures, infrastructure automation, and cloud development.",
+    "image": "https://tiago-carrico.github.io/personal-website/og.png"
+  },
   "analytics": {
     "enabled": false,
     "provider": "plausible",

@@ -1,26 +1,29 @@
-[
-  {
-    "name": "AWS Cloud Practitioner",
-    "issuer": "Amazon Web Services",
-    "date": "2025-09",
-    "url": "https://cp.certmetrics.com/amazon/en/public/verify/credential/67fb787623f340388b2648357cba6552"
-  },
-  {
-    "name": "Oracle Certified Foundations Associate",
-    "issuer": "Oracle",
-    "date": "2025-11",
-    "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=540ED78CE0AB5D6F5CA976859A225A05C0F56F5CAAFA0479E31A096D2F572A95"
-  },
-  {
-    "name": "HashiCorp Certified: Terraform Associate",
-    "issuer": "HashiCorp",
-    "date": "2026-04",
-    "url": "https://www.credly.com/badges/76172d83-e146-46be-baff-4fd4291ad307"
-  },
-  {
-    "name": "Professional Scrum Developer™ I",
-    "issuer": "Scrum.org",
-    "date": "2026-03",
-    "url": "https://www.credly.com/badges/5277191c-f9ae-4089-97a2-c21609c97e1a"
-  }
-]
+{
+  "enabled": true,
+  "items": [
+    {
+      "name": "AWS Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "date": "2025-09",
+      "url": "https://cp.certmetrics.com/amazon/en/public/verify/credential/67fb787623f340388b2648357cba6552"
+    },
+    {
+      "name": "Oracle Certified Foundations Associate",
+      "issuer": "Oracle",
+      "date": "2025-11",
+      "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=540ED78CE0AB5D6F5CA976859A225A05C0F56F5CAAFA0479E31A096D2F572A95"
+    },
+    {
+      "name": "HashiCorp Certified: Terraform Associate",
+      "issuer": "HashiCorp",
+      "date": "2026-04",
+      "url": "https://www.credly.com/badges/76172d83-e146-46be-baff-4fd4291ad307"
+    },
+    {
+      "name": "Professional Scrum Developer™ I",
+      "issuer": "Scrum.org",
+      "date": "2026-03",
+      "url": "https://www.credly.com/badges/5277191c-f9ae-4089-97a2-c21609c97e1a"
+    }
+  ]
+}

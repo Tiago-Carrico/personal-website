@@ -1,49 +1,25 @@
-[
-  {
-    "category": "Cloud platforms",
-    "skills": [
-      "AWS",
-      "GCP",
-      "Azure",
-      "OCI"
-    ]
-  },
-  {
-    "category": "Programming Languages",
-    "skills": [
-      "Python",
-      "Java",
-      "C/C++",
-      "PostgreSQL",
-      "Javascript",
-      "HTML/CSS"
-    ]
-  },
-  {
-    "category": "Tools",
-    "skills": [
-      "Git",
-      "GitHub",
-      "Docker",
-      "Terraform",
-      "Jira",
-      "Confluence",
-      "ServiceNow"
-    ]
-  },
-  {
-    "category": "Frameworks",
-    "skills": [
-      "Spring Boot",
-      "Django",
-      "React.js"
-    ]
-  },
-  {
-    "category": "Languages",
-    "skills": [
-      "Portuguese",
-      "English"
-    ]
-  }
-]
+{
+  "enabled": true,
+  "items": [
+    {
+      "category": "Cloud platforms",
+      "skills": ["AWS", "GCP", "Azure", "OCI"]
+    },
+    {
+      "category": "Programming Languages",
+      "skills": ["Python", "Java", "C/C++", "PostgreSQL", "Javascript", "HTML/CSS"]
+    },
+    {
+      "category": "Tools",
+      "skills": ["Git", "GitHub", "Docker", "Terraform", "Jira", "Confluence", "ServiceNow"]
+    },
+    {
+      "category": "Frameworks",
+      "skills": ["Spring Boot", "Django", "React.js"]
+    },
+    {
+      "category": "Languages",
+      "skills": ["Portuguese", "English"]
+    }
+  ]
+}

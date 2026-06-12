@@ -9,7 +9,7 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const siteData = content.site;
-  const shortTitle = siteData.title.split('—')[0].trim() || '';
+  const shortTitle = siteData.header_title.split('—')[0].trim() || '';
 
   return (
     <nav className="sticky top-0 w-full z-50 bg-background/80 backdrop-blurPortfolio-xl border-b border-outline-variant/30 transition-all duration-300">

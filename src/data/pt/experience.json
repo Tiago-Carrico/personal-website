@@ -1,28 +1,31 @@
-[
-  {
-    "company": "Deloitte",
-    "role": "Tech Analyst — Engenheiro Cloud & DevOps",
-    "startDate": "2025-01",
-    "endDate": "Presente",
-    "description": [
-      "Desenvolver e manter serviços backend cloud-native utilizando AWS (Lambda, API Gateway) com Python and JavaScript, focando em sistemas escaláveis baseados em microserviços",
-      "Desenhar e integrar APIs que ligam plataformas cloud modernas com sistemas empresariais legacy e serviços externos",
-      "Automatização de infraestrutura usando Infraestrutura como Código (Terraform, CloudFormation) para tornar implementações mais repetitivas e fiáveis",
-      "Apoiar pipelines de CI/CD com ferramentas como GitHub Actions e AWS CodePipeline para optimizar processos e reduzir passos de implementação manuais",
-      "Melhorar a fiabilidade de sistemas através de painéis de monitorização, logging e observabilidade usados para visibilidade operacional e resposta a incidentes",
-      "Contribuir para os fluxos de autenticação e identidade (SSO/Auth0), ajudando a melhorar a forma como os utilizadores e os sistemas acedem às aplicações de forma segura"
-    ]
-  },
-  {
-    "company": "Mindera",
-    "role": "Estagiário",
-    "startDate": "2023-10",
-    "endDate": "2024-07",
-    "description": [
-      "Traduzir processos de negócio em fluxos de trabalho técnicos e documentação estruturada para automatização e desenvolvimento de sistemas",
-      "Desenho de automatizações de fluxos de trabalho utilizando BPMN 2.0 e implementação com ferramentas como n8n",
-      "Desenvolvimento de serviços backend em Java e Python para apoiar a automatização de processos e integração de sistemas",
-      "Contribuição para o desenho de arquiteturas de microserviços e orientadas a eventos no âmbito dos sistemas empresarias existentes"
-    ]
-  }
-]
+{
+  "enabled": true,
+  "items": [
+    {
+      "company": "Deloitte",
+      "role": "Tech Analyst — Engenheiro Cloud & DevOps",
+      "startDate": "2025-01",
+      "endDate": "Presente",
+      "description": [
+        "Desenvolver e manter serviços backend cloud-native utilizando AWS (Lambda, API Gateway) com Python and JavaScript, focando em sistemas escaláveis baseados em microserviços",
+        "Desenhar e integrar APIs que ligam plataformas cloud modernas com sistemas empresariais legacy e serviços externos",
+        "Automatização de infraestrutura usando Infraestrutura como Código (Terraform, CloudFormation) para tornar implementações mais repetitivas e fiáveis",
+        "Apoiar pipelines de CI/CD com ferramentas como GitHub Actions e AWS CodePipeline para optimizar processos e reduzir passos de implementação manuais",
+        "Melhorar a fiabilidade de sistemas através de painéis de monitorização, logging e observabilidade usados para visibilidade operacional e resposta a incidentes",
+        "Contribuir para os fluxos de autenticação e identidade (SSO/Auth0), ajudando a melhorar a forma como os utilizadores e os sistemas acedem às aplicações de forma segura"
+      ]
+    },
+    {
+      "company": "Mindera",
+      "role": "Estagiário",
+      "startDate": "2023-10",
+      "endDate": "2024-07",
+      "description": [
+        "Traduzir processos de negócio em fluxos de trabalho técnicos e documentação estruturada para automatização e desenvolvimento de sistemas",
+        "Desenho de automatizações de fluxos de trabalho utilizando BPMN 2.0 e implementação com ferramentas como n8n",
+        "Desenvolvimento de serviços backend em Java e Python para apoiar a automatização de processos e integração de sistemas",
+        "Contribuição para o desenho de arquiteturas de microserviços e orientadas a eventos no âmbito dos sistemas empresarias existentes"
+      ]
+    }
+  ]
+}

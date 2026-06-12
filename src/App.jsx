@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTheme } from './hooks/useTheme';
+import { useLanguage } from './hooks/useLanguage';
+import { useDocumentMeta } from './hooks/useDocumentMeta';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -15,6 +17,10 @@ import { MouseSpotlight } from './components/MouseSpotlight';
 
 function App() {
   const { isDark, toggleTheme } = useTheme();
+  const { content } = useLanguage();
+
+  // Reactively update <head> meta tags from site.json on language change
+  useDocumentMeta(content.site);
 
   // ↓ Toggle this flag to show/hide the grid background
   const SHOW_GRID = true;
@@ -35,12 +41,12 @@ function App() {
         <main className="flex-grow">
           <Hero />
           <About />
+          <Blog />
           <Skills />
           <Experience />
           <Education />
           <Certifications />
           <Projects />
-          <Blog />
         </main>
 
         <Footer />

@@ -1,13 +1,16 @@
-[
-  {
-    "title": "Portfolio Website",
-    "description": "A personal portfolio to showcase my projects.",
-    "tags": [
-      "React",
-      "CSS",
-      "Vite"
-    ],
-    "link": "https://github.com/Tiago-Carrico/personal-website",
-    "image": "https://via.placeholder.com/300x200"
-  }
-]
+{
+  "enabled": true,
+  "items": [
+    {
+      "title": "Portfolio Website",
+      "description": "A personal portfolio to showcase my projects.",
+      "tags": [
+        "React",
+        "CSS",
+        "Vite"
+      ],
+      "link": "https://github.com/Tiago-Carrico/personal-website",
+      "image": "website_project_thumbnail.png"
+    }
+  ]
+}
