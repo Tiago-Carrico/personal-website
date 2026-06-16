@@ -36,7 +36,7 @@ export function Experience() {
                       </div>
                     </div>
                     <div className="mt-2 md:mt-0 px-3 py-1 bg-surface-dim rounded-full text-xs font-mono font-medium text-on-surface-variant inline-block">
-                      {formatDate(job.startDate)} — {job.endDate === "Present" || job.endDate === null ? "Present" : formatDate(job.endDate)}
+                      {formatDate(job.startDate)} — {job.endDate === "Present" || job.endDate === "Presente" || job.endDate === null ? (lang === 'en' ? 'Present' : 'Presente') : formatDate(job.endDate)}
                     </div>
                   </div>
 

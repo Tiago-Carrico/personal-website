@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   /* ==========================================================================
      DESIGN TOKENS & CUSTOM PROPERTIES
      Mapped to Tailwind CSS in tailwind.config.js
@@ -14,42 +19,51 @@
 
     /* Page Viewport Background
        - Used in App.jsx (body container) via 'bg-background' to set the main background color. */
-    --color-background: 248 249 255; /* #f8f9ff */
+    --color-background: 248 249 255;
+    /* #f8f9ff */
 
     /* Solid Container Surface
        - Used in cards, components (e.g. Footer.jsx, sticky header nav) via 'bg-surface'. */
-    --color-surface: 255 255 255; /* #ffffff */
+    --color-surface: 255 255 255;
+    /* #ffffff */
 
     /* Muted/Dim Surface
        - Used in section background alternates (e.g. Certifications, Experience bg) via 'bg-surface-dim/30'
        - Used in timeline date chips via 'bg-surface-dim'. */
-    --color-surface-dim: 234 241 255; /* #eaf1ff */
+    --color-surface-dim: 234 241 255;
+    /* #eaf1ff */
 
     /* Primary Accent Color
        - Main branding color used for text, active tags, and timeline dots (e.g., Work Experience timeline accent).
        - Used in list bullets (.tech-list), text accents ('text-primary'), and active selectors. */
-    --color-primary: 53 37 205; /* #3525cd - Deep Indigo */
+    --color-primary: 53 37 205;
+    /* #3525cd - Deep Indigo */
 
     /* Secondary Accent Color
        - Accent color used for secondary features (e.g., Academic/Education timeline accent, special badges).
        - Dynamically read by MouseSpotlight.jsx to color the cursor's radial spotlight trail. */
-    --color-secondary: 0 106 97; /* #006a61 - Deep Teal/Emerald */
+    --color-secondary: 0 106 97;
+    /* #006a61 - Deep Teal/Emerald */
 
     /* Primary Typography
        - Applied to body text and main headings ('text-on-surface') for high contrast readability. */
-    --color-on-surface: 11 28 48; /* #0b1c30 - Very Dark Blue */
+    --color-on-surface: 11 28 48;
+    /* #0b1c30 - Very Dark Blue */
 
     /* Secondary/Muted Typography
        - Applied to subtitles, descriptive bios, list contents, and metadata ('text-on-surface-variant'). */
-    --color-on-surface-variant: 70 69 85; /* #464555 - Cool Grayish Purple */
+    --color-on-surface-variant: 70 69 85;
+    /* #464555 - Cool Grayish Purple */
 
     /* Primary Outline/Divider
        - Used for standard divider lines, timeline tracks, and subtle structural borders ('border-outline'). */
-    --color-outline: 119 117 135; /* #777587 - Slate Gray */
+    --color-outline: 119 117 135;
+    /* #777587 - Slate Gray */
 
     /* Secondary/Accented Outline
        - Used for decorative dividers or border accents ('border-outline-variant'). */
-    --color-outline-variant: 199 196 216; /* #c7c4d8 - Lilac Gray */
+    --color-outline-variant: 199 196 216;
+    /* #c7c4d8 - Lilac Gray */
 
     /* Glassmorphism Variables
        - Configures translucent card overlays ('glass-panel') with blurred backdrops and primary accent borders. */
@@ -69,31 +83,40 @@
        ------------------------------------------------------------------------ */
 
     /* Page Viewport Background */
-    --color-background: 6 6 14; /* #06060e - Obsidian Black */
+    --color-background: 6 6 14;
+    /* #06060e - Obsidian Black */
 
     /* Solid Container Surface */
-    --color-surface: 19 18 28; /* #13121c - Slate Black */
+    --color-surface: 19 18 28;
+    /* #13121c - Slate Black */
 
     /* Muted/Dim Surface */
-    --color-surface-dim: 25 25 36; /* #191924 - Dark Muted Slate */
+    --color-surface-dim: 25 25 36;
+    /* #191924 - Dark Muted Slate */
 
     /* Primary Accent Color */
-    --color-primary: 168 85 247; /* #a855f7 - Neon Violet */
+    --color-primary: 168 85 247;
+    /* #a855f7 - Neon Violet */
 
     /* Secondary Accent Color */
-    --color-secondary: 236 72 153; /* #ec4899 - Neon Pink */
+    --color-secondary: 236 72 153;
+    /* #ec4899 - Neon Pink */
 
     /* Primary Typography */
-    --color-on-surface: 228 225 238; /* #e4e1ee - Soft Lavender Gray */
+    --color-on-surface: 228 225 238;
+    /* #e4e1ee - Soft Lavender Gray */
 
     /* Secondary/Muted Typography */
-    --color-on-surface-variant: 207 194 214; /* #cfc2d6 - Soft Grayish Purple */
+    --color-on-surface-variant: 207 194 214;
+    /* #cfc2d6 - Soft Grayish Purple */
 
     /* Primary Outline/Divider */
-    --color-outline: 152 141 159; /* #988d9f - Muted Gray Purple */
+    --color-outline: 152 141 159;
+    /* #988d9f - Muted Gray Purple */
 
     /* Secondary/Accented Outline */
-    --color-outline-variant: 77 67 84; /* #4d4354 - Dark Slate Purple */
+    --color-outline-variant: 77 67 84;
+    /* #4d4354 - Dark Slate Purple */
 
     /* Glassmorphism Variables */
     --glass-bg: rgba(19, 18, 28, 0.88);
@@ -162,13 +185,15 @@ body {
    Ensures the page prints cleanly as a professional A4 paper CV.
    ========================================================================== */
 @media print {
+
   /* Reset page layout, background colors, and typography for paper printing */
   @page {
     size: A4 portrait;
     margin: 1.5cm;
   }
 
-  body, html {
+  body,
+  html {
     background: #ffffff !important;
     color: #111111 !important;
     font-size: 11pt !important;
@@ -190,12 +215,14 @@ body {
   /* ------------------------------------------------------------------------
      HIDDEN ELEMENTS (Non-printable UI)
      ------------------------------------------------------------------------ */
-  
+
   /* Hide sticky nav header, theme switches, buttons, and animations */
   nav,
   header,
-  footer p:first-of-type, /* Hide footer social logos */
-  #footer div.flex,       /* Hide footer social icon buttons */
+  footer p:first-of-type,
+  /* Hide footer social logos */
+  #footer div.flex,
+  /* Hide footer social icon buttons */
   button,
   .bg-grid,
   .pointer-events-none,
@@ -207,7 +234,8 @@ body {
   /* Hide Hero section call-to-action buttons */
   #hero a,
   #hero button,
-  .inline-flex.items-center.gap-2.text-sm { /* View Repository / Verify buttons */
+  .inline-flex.items-center.gap-2.text-sm {
+    /* View Repository / Verify buttons */
     display: none !important;
   }
 
@@ -217,7 +245,7 @@ body {
   }
 
   /* Hide dynamic scroller indicators or pagination dots */
-  .relative.w-full.aspect-square + div.flex.justify-center {
+  .relative.w-full.aspect-square+div.flex.justify-center {
     display: none !important;
   }
 
@@ -253,7 +281,9 @@ body {
     break-after: avoid;
   }
 
-  p, li, span {
+  p,
+  li,
+  span {
     color: #333333 !important;
   }
 
@@ -265,7 +295,7 @@ body {
   /* ------------------------------------------------------------------------
      CONTAINERS & COMPONENTS
      ------------------------------------------------------------------------ */
-  
+
   /* Flatten glassmorphism cards for printing */
   .glass-panel {
     background: #ffffff !important;
@@ -327,11 +357,11 @@ body {
   /* ------------------------------------------------------------------------
      PAGE BREAKS (CV structure optimization)
      ------------------------------------------------------------------------ */
-  
+
   /* Prevent sections, cards, and individual jobs from splitting awkwardly */
   .glass-panel,
   section,
-  .relative.border-l-2 > div {
+  .relative.border-l-2>div {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
   }
