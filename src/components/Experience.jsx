@@ -1,12 +1,13 @@
-import React from 'react';
 import { ScrollReveal } from './ScrollReveal';
 import { useLanguage } from '../hooks/useLanguage';
 import { formatDate } from '../utils/dateFormatter';
 import { Briefcase } from 'lucide-react';
 
 export function Experience() {
-  const { content, lang } = useLanguage();
+  const { content } = useLanguage();
   const experienceData = content.experience;
+  const ui = content.site.ui;
+  const dateLocale = content.site.dateLocale;
 
   if (!experienceData?.enabled) return null;
 
@@ -15,7 +16,7 @@ export function Experience() {
       <div className="max-w-4xl mx-auto px-6">
         <ScrollReveal>
           <h2 className="text-3xl font-display font-bold mb-12">
-            {lang === 'en' ? 'Work Experience' : 'Experiência Profissional'}
+            {ui.sections.experience}
           </h2>
         </ScrollReveal>
 
@@ -36,7 +37,7 @@ export function Experience() {
                       </div>
                     </div>
                     <div className="mt-2 md:mt-0 px-3 py-1 bg-surface-dim rounded-full text-xs font-mono font-medium text-on-surface-variant inline-block">
-                      {formatDate(job.startDate)} — {job.endDate === "Present" || job.endDate === "Presente" || job.endDate === null ? (lang === 'en' ? 'Present' : 'Presente') : formatDate(job.endDate)}
+                      {formatDate(job.startDate, dateLocale)} — {job.endDate == null ? ui.actions.present : formatDate(job.endDate, dateLocale)}
                     </div>
                   </div>
 

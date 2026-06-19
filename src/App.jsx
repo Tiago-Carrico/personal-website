@@ -1,5 +1,3 @@
-import React from 'react';
-import { useTheme } from './hooks/useTheme';
 import { useLanguage } from './hooks/useLanguage';
 import { useDocumentMeta } from './hooks/useDocumentMeta';
 import { Header } from './components/Header';
@@ -16,14 +14,12 @@ import { Analytics } from './components/Analytics';
 import { MouseSpotlight } from './components/MouseSpotlight';
 
 function App() {
-  const { isDark, toggleTheme } = useTheme();
   const { content } = useLanguage();
 
   // Reactively update <head> meta tags from site.json on language change
   useDocumentMeta(content.site);
 
-  // ↓ Toggle this flag to show/hide the grid background
-  const SHOW_GRID = true;
+  const SHOW_GRID = content.site.flags?.showGrid ?? true;
 
   return (
     <div className="min-h-screen bg-background text-on-surface font-sans transition-colors duration-300 relative selection:bg-primary/30">
@@ -36,7 +32,7 @@ function App() {
       {/*<MouseSpotlight />*/}
 
       <div className="relative z-10 flex flex-col min-h-screen">
-        <Header isDark={isDark} toggleTheme={toggleTheme} />
+        <Header />
 
         <main className="flex-grow">
           <Hero />

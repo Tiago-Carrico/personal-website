@@ -1,12 +1,13 @@
-import React from 'react';
 import { ScrollReveal } from './ScrollReveal';
 import { useLanguage } from '../hooks/useLanguage';
 import { formatDate } from '../utils/dateFormatter';
 import { GraduationCap } from 'lucide-react';
 
 export function Education() {
-  const { content, lang } = useLanguage();
+  const { content } = useLanguage();
   const educationData = content.education;
+  const ui = content.site.ui;
+  const dateLocale = content.site.dateLocale;
 
   if (!educationData?.enabled) return null;
 
@@ -15,7 +16,7 @@ export function Education() {
       <div className="max-w-4xl mx-auto px-6">
         <ScrollReveal>
           <h2 className="text-3xl font-display font-bold mb-12">
-            {lang === 'en' ? 'Education' : 'Formação Académica'}
+            {ui.sections.education}
           </h2>
         </ScrollReveal>
 
@@ -35,7 +36,7 @@ export function Education() {
                       </div>
                     </div>
                     <div className="mt-2 md:mt-0 px-3 py-1 bg-surface-dim rounded-full text-xs font-mono font-medium text-on-surface-variant inline-block">
-                      {formatDate(edu.startDate)} — {formatDate(edu.endDate)}
+                      {formatDate(edu.startDate, dateLocale)} — {formatDate(edu.endDate, dateLocale)}
                     </div>
                   </div>
                 </div>

@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollReveal } from './ScrollReveal';
 import { useLanguage } from '../hooks/useLanguage';
 import { Terminal } from 'lucide-react';
 
+// Resolved at build time by Vite — must be at module level
+const photoModules = import.meta.glob('/src/data/personal/*.{png,jpg,jpeg,webp,svg}', { eager: true });
+const photos = Object.values(photoModules).map((mod) => mod.default || mod);
+
 export function About() {
-  const { content, lang } = useLanguage();
+  const { content } = useLanguage();
   const aboutData = content.about;
 
   if (!aboutData?.enabled) return null;
 
   const { bio } = aboutData;
+  const ui = content.site.ui;
 
-  // Flag to toggle photo display in the code itself
-  const SHOW_PHOTOS = true;
-
-  // Dynamically load all images in /src/data/personal/
-  const photoModules = import.meta.glob('/src/data/personal/*.{png,jpg,jpeg,webp,svg}', { eager: true });
-  const photos = Object.values(photoModules).map((mod) => mod.default || mod);
+  const SHOW_PHOTOS = content.site.flags?.showPhotos ?? true;
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     if (photos.length <= 1 || !SHOW_PHOTOS) return;
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % photos.length);
+      setCurrentIndex((prev) => (prev + 1) % photos.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [photos.length, currentIndex]);
+  }, [SHOW_PHOTOS]);
 
   const hasPhotos = SHOW_PHOTOS && photos.length > 0;
 
@@ -37,7 +37,7 @@ export function About() {
         <ScrollReveal>
           <div className="flex items-center gap-4">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-on-surface tracking-tight">
-              {lang === 'en' ? 'About Me' : 'Sobre Mim'}
+              {ui.sections.about}
             </h2>
             <div className="h-px bg-outline-variant/50 flex-grow"></div>
           </div>
@@ -50,7 +50,7 @@ export function About() {
               <div className={hasPhotos ? 'md:col-span-2' : ''}>
                 <Terminal className="text-primary mb-6" size={32} />
                 <h3 className="font-display text-2xl font-bold text-on-surface mb-4">
-                  {lang === 'en' ? 'More than just Uptime' : 'Mais do que Uptime'}
+                  {ui.sections.aboutSubtitle}
                 </h3>
                 <p className="font-body text-on-surface-variant leading-relaxed text-lg whitespace-pre-line">
                   {bio}
@@ -64,7 +64,7 @@ export function About() {
                     <motion.img
                       key={currentIndex}
                       src={photos[currentIndex]}
-                      alt={lang === 'en' ? 'Photo of Tiago Carriço' : 'Foto de Tiago Carriço'}
+                      alt={ui.photo.alt}
                       initial={{ opacity: 0, scale: 1.05 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.95 }}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLanguage } from '../hooks/useLanguage';
 import { Github, Linkedin, Mail, Twitter, Globe } from 'lucide-react';
 
@@ -10,8 +9,9 @@ const iconMap = {
 };
 
 export function Footer() {
-  const { content, lang } = useLanguage();
+  const { content } = useLanguage();
   const personalData = content.personal;
+  const ui = content.site.ui;
   return (
     <footer id="footer" className="py-12 border-t border-outline/20 bg-surface text-center">
       <div className="max-w-5xl mx-auto px-6">
@@ -45,7 +45,7 @@ export function Footer() {
         </div>
 
         <p className="text-sm font-mono text-on-surface-variant opacity-70">
-          &copy; {new Date().getFullYear()} {personalData.name}. {lang === 'en' ? 'All rights reserved.' : 'Todos os direitos reservados.'}
+          &copy; {new Date().getFullYear()} {personalData.name}. {ui.footer.rights}
         </p>
       </div>
     </footer>

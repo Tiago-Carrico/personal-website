@@ -1,4 +1,3 @@
-import React from 'react';
 import { ScrollReveal } from './ScrollReveal';
 import { useLanguage } from '../hooks/useLanguage';
 import { Github, ExternalLink } from 'lucide-react';
@@ -10,8 +9,9 @@ const getImageUrl = (filename) => {
 };
 
 export function Projects() {
-  const { content, lang } = useLanguage();
+  const { content } = useLanguage();
   const projectsData = content.projects;
+  const ui = content.site.ui;
 
   if (!projectsData?.enabled) return null;
 
@@ -20,7 +20,7 @@ export function Projects() {
       <div className="max-w-5xl mx-auto px-6">
         <ScrollReveal>
           <h2 className="text-3xl font-display font-bold mb-12">
-            {lang === 'en' ? 'Projects' : 'Projetos'}
+            {ui.sections.projects}
           </h2>
         </ScrollReveal>
 
@@ -59,7 +59,7 @@ export function Projects() {
                       className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-variant transition-colors"
                     >
                       <Github size={16} />
-                      {lang === 'en' ? 'View Repository' : 'Ver Repositório'} <ExternalLink size={14} />
+                      {ui.actions.viewRepo} <ExternalLink size={14} />
                     </a>
                   )}
                 </div>

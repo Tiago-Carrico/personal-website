@@ -1,12 +1,13 @@
-import React from 'react';
 import { ScrollReveal } from './ScrollReveal';
 import { useLanguage } from '../hooks/useLanguage';
 import { formatDate } from '../utils/dateFormatter';
 import { ExternalLink } from 'lucide-react';
 
 export function Blog() {
-  const { content, lang } = useLanguage();
+  const { content } = useLanguage();
   const blogData = content.blog;
+  const ui = content.site.ui;
+  const dateLocale = content.site.dateLocale;
 
   // Render nothing if the blog section is disabled in the config
   if (!blogData || !blogData.enabled) return null;
@@ -41,7 +42,7 @@ export function Blog() {
                     {post.platform}
                   </span>
                   <div className="flex items-center gap-3 text-xs text-on-surface-variant font-mono">
-                    <span>{formatDate(post.date, lang === 'en' ? 'en-US' : 'pt-PT')}</span>
+                    <span>{formatDate(post.date, dateLocale)}</span>
                     <span>&bull;</span>
                     <span>{post.readTime}</span>
                   </div>
@@ -67,7 +68,7 @@ export function Blog() {
 
                 <div className="mt-auto pt-4 flex items-center justify-between border-t border-outline/10 text-sm font-semibold text-primary">
                   <span className="group-hover:underline">
-                    {lang === 'en' ? 'Read Article' : 'Ler Artigo'}
+                    {ui.actions.readArticle}
                   </span>
                   <span className="transform group-hover:translate-x-1 transition-transform duration-300 flex items-center gap-1">
                     <ExternalLink size={14} />

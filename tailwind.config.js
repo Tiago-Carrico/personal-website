@@ -22,12 +22,6 @@ export default {
         body: ['Inter', 'sans-serif'],
         display: ['JetBrains Mono', 'monospace'],
       },
-      spacing: {
-        gutter: "24px",
-        "max-width": "1200px",
-        "margin-desktop": "80px",
-        "margin-mobile": "20px",
-      }
     },
   },
   plugins: [],

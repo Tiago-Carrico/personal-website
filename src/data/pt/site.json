@@ -9,5 +9,45 @@
     "provider": "plausible",
     "domain": "yourdomain.com",
     "scriptUrl": "https://plausible.io/js/script.js"
+  },
+  "flags": {
+    "showGrid": true,
+    "showPhotos": true
+  },
+  "ui": {
+    "nav": {
+      "about": "Sobre",
+      "skills": "Competências",
+      "experience": "Experiência",
+      "projects": "Projetos",
+      "blog": "Blog",
+      "resume": "Currículo",
+      "resumeDownload": "Descarregar Currículo"
+    },
+    "sections": {
+      "about": "Sobre Mim",
+      "aboutSubtitle": "Mais do que Uptime",
+      "skills": "Competências & Tecnologias",
+      "experience": "Experiência Profissional",
+      "education": "Formação Académica",
+      "certifications": "Certificações",
+      "projects": "Projetos",
+      "blog": "Publicações"
+    },
+    "actions": {
+      "viewProjects": "Ver Projetos",
+      "contactMe": "Contactar-me",
+      "viewRepo": "Ver Repositório",
+      "readArticle": "Ler Artigo",
+      "verify": "Verificar",
+      "issued": "Emitido",
+      "present": "Presente"
+    },
+    "photo": {
+      "alt": "Foto de Tiago Carriço"
+    },
+    "footer": {
+      "rights": "Todos os direitos reservados."
+    }
   }
 }

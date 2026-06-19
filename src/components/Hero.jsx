@@ -6,8 +6,9 @@ import { ScrollReveal } from './ScrollReveal';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function Hero() {
-  const { content, lang } = useLanguage();
+  const { content } = useLanguage();
   const { name, title, bio, heroSnippets } = content.personal;
+  const ui = content.site.ui;
   const [snippetIndex, setSnippetIndex] = useState(0);
   const [showName, setShowName] = useState(false);
   const [showRest, setShowRest] = useState(false);
@@ -98,13 +99,13 @@ export function Hero() {
                     href="#projects"
                     className="px-8 py-4 bg-primary text-surface font-display text-sm font-medium rounded-lg hover:opacity-90 hover:shadow-lg hover:-translate-y-1 hover:shadow-primary/20 transition-all flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background outline-none"
                   >
-                    {lang === 'en' ? 'View Projects' : 'Ver Projetos'} <ArrowRight size={18} />
+                  {ui.actions.viewProjects} <ArrowRight size={18} />
                   </a>
                   <a
                     href="#footer"
                     className="px-8 py-4 border border-outline-variant text-primary font-display text-sm font-medium rounded-lg hover:bg-surface-dim hover:-translate-y-1 transition-all focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background outline-none"
                   >
-                    {lang === 'en' ? 'Contact Me' : 'Contactar-me'}
+                     {ui.actions.contactMe}
                   </a>
                 </motion.div>
               </>
@@ -156,21 +157,29 @@ export function Hero() {
 }
 
 // Simple hacky syntax highlighter to make snippets look good
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
 function syntaxHighlight(code) {
-  const unescaped = code.replace(/\\"/g, '"').replace(/\\n/g, '\n').replace(/\\t/g, '\t')
-  const keywords = new Set(['const', 'let', 'var', 'function', 'return', 'if', 'else', 'func', 'import', 'export', 'from', 'type', 'interface', 'err', 'nil', 'ctx', 'req', 'res', 'defer'])
-  const literals = new Set(['true', 'false', 'null', 'undefined'])
-  return unescaped.replace(
-    /(["'`][^"'`\n]*["'`])|(\/\/[^\n]*)|(\/\*[\s\S]*?\*\/)|(\b\d+\b)|(\b\w+\b)(?=\s*\()|(\b\w+\b)/g,
-    (match, str, lineComment, blockComment, number, funcName, word) => {
-      if (str) return `<span class="text-secondary">${match}</span>`
-      if (lineComment) return `<span class="text-outline">${match}</span>`
-      if (blockComment) return `<span class="text-outline">${match}</span>`
-      if (number) return `<span class="text-secondary">${match}</span>`
-      if (funcName) return `<span class="text-primary">${match}</span>`
-      if (keywords.has(word)) return `<span class="text-primary">${match}</span>`
-      if (literals.has(word)) return `<span class="text-secondary">${match}</span>`
-      return match
+  const unescaped = code.replace(/\\"/g, '"').replace(/\\n/g, '\n').replace(/\\t/g, '\t');
+  const safe = escapeHtml(unescaped);
+  const keywords = new Set(['const', 'let', 'var', 'function', 'return', 'if', 'else', 'func', 'import', 'export', 'from', 'type', 'interface', 'err', 'nil', 'ctx', 'req', 'res', 'defer']);
+  const literals = new Set(['true', 'false', 'null', 'undefined']);
+  return safe.replace(
+    /(["'`][^"'`\n]*["'`])|((\/\/[^\n]*))|(\/\*[\s\S]*?\*\/)|(\b\d+\b)|(\b\w+\b)(?=\s*\()|(\b\w+\b)/g,
+    (match, str, _lineCommentFull, lineComment, blockComment, number, funcName, word) => {
+      if (str) return `<span class="text-secondary">${match}</span>`;
+      if (lineComment) return `<span class="text-outline">${match}</span>`;
+      if (blockComment) return `<span class="text-outline">${match}</span>`;
+      if (number) return `<span class="text-secondary">${match}</span>`;
+      if (funcName) return `<span class="text-primary">${match}</span>`;
+      if (keywords.has(word)) return `<span class="text-primary">${match}</span>`;
+      if (literals.has(word)) return `<span class="text-secondary">${match}</span>`;
+      return match;
     }
-  )
+  );
 }

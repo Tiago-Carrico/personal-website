@@ -1,12 +1,13 @@
-import React from 'react';
 import { ScrollReveal } from './ScrollReveal';
 import { useLanguage } from '../hooks/useLanguage';
 import { formatDate } from '../utils/dateFormatter';
 import { Award, ExternalLink } from 'lucide-react';
 
 export function Certifications() {
-  const { content, lang } = useLanguage();
+  const { content } = useLanguage();
   const certificationsData = content.certifications;
+  const ui = content.site.ui;
+  const dateLocale = content.site.dateLocale;
 
   if (!certificationsData?.enabled) return null;
 
@@ -15,7 +16,7 @@ export function Certifications() {
       <div className="max-w-5xl mx-auto px-6">
         <ScrollReveal>
           <h2 className="text-3xl font-display font-bold mb-12">
-            {lang === 'en' ? 'Certifications' : 'Certificações'}
+            {ui.sections.certifications}
           </h2>
         </ScrollReveal>
         
@@ -37,7 +38,7 @@ export function Certifications() {
                 
                 <div className="mt-auto pt-4 flex items-center justify-between border-t border-outline/20">
                   <span className="text-xs font-mono text-on-surface-variant">
-                    {lang === 'en' ? 'Issued' : 'Emitido'}: {formatDate(cert.date)}
+                    {ui.actions.issued}: {formatDate(cert.date, dateLocale)}
                   </span>
                   
                   {cert.url && (
@@ -47,7 +48,7 @@ export function Certifications() {
                       rel="noopener noreferrer"
                       className="text-xs font-medium text-primary flex items-center gap-1 hover:underline"
                     >
-                      {lang === 'en' ? 'Verify' : 'Verificar'} <ExternalLink size={12} />
+                      {ui.actions.verify} <ExternalLink size={12} />
                     </a>
                   )}
                 </div>

@@ -1,10 +1,10 @@
-import React from 'react';
 import { ScrollReveal } from './ScrollReveal';
 import { useLanguage } from '../hooks/useLanguage';
 
 export function Skills() {
-  const { content, lang } = useLanguage();
+  const { content } = useLanguage();
   const skillsData = content.skills;
+  const ui = content.site.ui;
 
   if (!skillsData?.enabled) return null;
 
@@ -13,7 +13,7 @@ export function Skills() {
       <div className="max-w-5xl mx-auto px-6">
         <ScrollReveal>
           <h2 className="text-3xl font-display font-bold mb-12">
-            {lang === 'en' ? 'Skills & Tech Stack' : 'Competências & Tecnologias'}
+            {ui.sections.skills}
           </h2>
         </ScrollReveal>
         
