@@ -60,6 +60,7 @@ export function Header() {
 
           <a
             href="/cv.pdf"
+            download="cv.pdf"
             target="_blank"
             className="hidden md:block px-4 py-2 min-w-[7.5rem] text-center border border-outline-variant/50 text-primary font-display text-sm font-medium rounded hover:bg-surface-dim transition-colors focus-visible:ring-2 focus-visible:ring-primary outline-none"
           >
@@ -99,6 +100,7 @@ export function Header() {
           )}
           <a
             href="/cv.pdf"
+            download="cv.pdf"
             target="_blank"
             className="w-full text-center py-3 mt-2 border border-primary text-primary font-display font-medium rounded hover:bg-primary/10 transition-colors"
           >
