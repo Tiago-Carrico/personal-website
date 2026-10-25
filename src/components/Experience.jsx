@@ -37,7 +37,7 @@ export function Experience() {
                       </div>
                     </div>
                     <div className="mt-2 md:mt-0 px-3 py-1 bg-surface-dim rounded-full text-xs font-mono font-medium text-on-surface-variant inline-block">
-                      {formatDate(job.startDate, dateLocale)} — {job.endDate ? ui.actions.present : formatDate(job.endDate, dateLocale)}
+                      {formatDate(job.startDate, dateLocale)} — {!job.endDate ? ui.actions.present : formatDate(job.endDate, dateLocale)}
                     </div>
                   </div>
 
