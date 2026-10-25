@@ -24,6 +24,12 @@
       "issuer": "Scrum.org",
       "date": "2026-03",
       "url": "https://www.credly.com/badges/5277191c-f9ae-4089-97a2-c21609c97e1a"
+    },
+    {
+      "name": "AWS Certified AI Practitioner",
+      "issuer": "Amazon Web Services",
+      "date": "2026-10",
+      "url": "https://cp.certmetrics.com/amazon/en/public/verify/credential/a12d64e88992417e80741912e1c2e98a"
     }
   ]
 }
