@@ -5,7 +5,7 @@
       "company": "Deloitte",
       "role": "Tech Analyst — Cloud & DevOps Engineer",
       "startDate": "2025-01",
-      "endDate": "Present",
+      "endDate": "",
       "description": [
         "Build and maintain cloud-native backend services using AWS (Lambda, API Gateway) with Python and JavaScript, focusing on scalable microservice-based systems",
         "Design and integrate APIs that connect modern cloud platforms with legacy enterprise systems and external services",
